@@ -31,6 +31,7 @@ In this implementation of A* search I have used a Map object to store the walls 
 * __draw__ - This is the function to draw the Map to the surface specified in the __init__. Draws walls as black, none walls as white
 ## AI.py
 AI.py uses the A* pathfinding and the Map to make a AI that can walk to a certain location, avoiding walls and going that fastest route. Also the AI can wander in a roi (region of interest) of the map. This allows the AI to walk around a room or location on the map picking a random cell to walk to. This creates a more live and realistic AI template
+### Functions
 * __init__ - This is the init function which is run when the object is initalised
     * Map - This parameter is passing the Map object to the AI hence allowing it to solve the shorest route and move along the path to the location. Format = Map object. (Required)
     * roi - This is the area in which the AI is allowed to wander, as of this current update it does not take into account walls so choose a roi that doesn't contain any walls. Format = [top left x, top left y, width, height]. Default = [7, 7, 15, 15]
