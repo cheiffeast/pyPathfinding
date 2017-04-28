@@ -13,7 +13,8 @@ Examples:
 2. aiexample - Aiexmaple is a function that uses the AI.py file that allows a AI to find a path to a position and wander around the map in a roi (region of interest). To run aiexample uncomment aiexmaple() at the bottom of the examples.py file
 # Documentation
 ## Map.py
-In this implementation of A* search I have used a Map object to store the walls and calulate the shorest route in. In doing so the main loop of the game/demo can be alot smaller as 50 lines of code can be expressed in 1 line hence keeping the main game loop tidy and readable. The below bulletpoints breifly describe what each function does
+In this implementation of A* search I have used a Map object to store the walls and calulate the shorest route in. In doing so the main loop of the game/demo can be alot smaller as 50 lines of code can be expressed in 1 line hence keeping the main game loop tidy and readable.
+### Functions
 * __init__ - The init function is run when the object is initalised and for the Map object you can pass multiple parameters
     * surface - This is the [pygame surface](https://www.pygame.org/docs/ref/surface.html) that you want to draw the Map onto. (Required)
     * size - This is the width and the height of the Map in cells. Format = [width, height]. Default = [10, 10]
