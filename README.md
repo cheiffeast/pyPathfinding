@@ -29,6 +29,30 @@ In this implementation of A* search I have used a Map object to store the walls 
     * camefrom - A dictionary that allows you to span back up to the original start point. Traverse up to the start position hence returning the shortest path. Format = {}
     * startpos - The start position from the __Astar__ function, this is used to check if we have reached the end point. Format = [x, y] where x and y are cell positions (not pixels). Default = [0, 0]
 * __draw__ - This is the function to draw the Map to the surface specified in the __init__. Draws walls as black, none walls as white
+### Usage
+```python
+import Map
+import pygame
+from pygame.locals import *
+
+screen = pygame.display.set_mode([500, 500])
+map = Map.Map(screen, [15, 15])
+path = map.Astar((5, 5))
+playing = True
+while playing:
+    screen.fill([255, 255, 255])
+    map.draw()
+    for item in path:
+        pygame.draw.rect(screen, [0, 255, 0],
+                         [item[0] * map.cellsize[0],
+                          item[1] * map.cellsize[1],
+                          map.cellsize[0], map.cellsize[1]])
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            playing = False
+    pygame.display.update()
+pygame.quit()
+```
 ## AI.py
 AI.py uses the A* pathfinding and the Map to make a AI that can walk to a certain location, avoiding walls and going that fastest route. Also the AI can wander in a roi (region of interest) of the map. This allows the AI to walk around a room or location on the map picking a random cell to walk to. This creates a more live and realistic AI template
 ### Functions
