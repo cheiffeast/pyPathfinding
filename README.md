@@ -18,4 +18,7 @@ In this implementation of A* search I have used a Map object to store the walls 
     * surface: This is the [pygame surface](https://www.pygame.org/docs/ref/surface.html) that you want to draw the Map onto. (Required)
     * size: This is the width and the height of the Map in cells. Format = [width, height]. Default = [10, 10]
     * walls: This is a list of walls that are to be made when the Map is initalised. Format = [[wallxpos, wallypos]] where wallxpos is the x coordinate in cells (not pixels) and wallypos is the y coordinate in cells. Default = []
+* getneibs - This function is used to get the neighbours of a position, also checks if there is a wall there and will not return a cell tht is a wall
+    * currentpos - This is the current position you wish to get the neighbours of. Format = [x, y] where x and y are cell position (not pixe). (Required)
+    
     
