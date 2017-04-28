@@ -36,7 +36,7 @@ import pygame
 from pygame.locals import *
 
 screen = pygame.display.set_mode([500, 500])
-map = Map.Map(screen, [15, 15])
+map = Map.Map(screen, [15, 15], walls = [[5, 6], [6, 6], [6, 5], [5, 7], [5, 8], [6, 4]])
 path = map.Astar((5, 5))
 playing = True
 while playing:
