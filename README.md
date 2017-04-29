@@ -63,6 +63,16 @@ pygame.quit()
 ```
 ## AI.py
 AI.py uses the A* pathfinding and the Map to make a AI that can walk to a certain location, avoiding walls and going that fastest route. Also the AI can wander in a roi (region of interest) of the map. This allows the AI to walk around a room or location on the map picking a random cell to walk to. This creates a more live and realistic AI template
+### Variables
+*self* refers to the AI object
+* *self*.map - This is Map the AI will be using when walking and pathfinding. Format = Map Object
+* *self*.roi - roi stands for region of interest, this is the area the AI is allowed to walk around in. Format = [top left corner x, top left corner y, width, height]
+* *self*.currentpos - This is the position is AI is currently at in the world. Format = [x, y] where x and y are cell positions
+* *self*.speed - This is the speed the AI will be moving at when walking normally. Format = int
+* *self*.sprintspeed - This is the sprinting speed of the AI. Format = int
+* *self*.currentpath - This is the current path the AI is trying to walk along
+* *self*.frame - This is a simple counter of how many times *self*.move has been called. Format = int. Default = 0
+* *self*.lastmove - This is the last time the bot moved. Format = [time.time()](https://docs.python.org/2/library/time.html)
 ### Functions
 * __init__ - This is the init function which is run when the object is initalised
     * Map - This parameter is passing the Map object to the AI hence allowing it to solve the shorest route and move along the path to the location. Format = Map object. (Required)
