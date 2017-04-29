@@ -80,5 +80,6 @@ AI.py uses the A* pathfinding and the Map to make a AI that can walk to a certai
     * startpos - This is where the AI will be spawned on the Map. Format = [x, y] x, y = cell positions. Default = [0, 0]
     * speed - This is the speed value for the AI. As speed tends towards 0, the speed the AI will move tends towards infinity. Hence choosing a smaller value for this will make the AI move faster. Format = int. Default = 10
     * sspeed - This is the sprint speed of the bot. Format = int. Default = 5
-* __wander__ - 
+* __wander__ - This is called when the AI has no current path to be following and hence will wander around *self*.roi
+
     
