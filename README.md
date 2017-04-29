@@ -63,7 +63,7 @@ pygame.quit()
 ```
 ## AI.py
 AI.py uses the A* pathfinding and the Map to make a AI that can walk to a certain location, avoiding walls and going that fastest route. Also the AI can wander in a roi (region of interest) of the map. This allows the AI to walk around a room or location on the map picking a random cell to walk to. This creates a more live and realistic AI template.  
-** *self* ** refers to the AI object
+***self* refers to the AI object**
 ### Variables
 * *self*.map - This is Map the AI will be using when walking and pathfinding. Format = Map Object
 * *self*.roi - roi stands for region of interest, this is the area the AI is allowed to walk around in. Format = [top left corner x, top left corner y, width, height]
