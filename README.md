@@ -14,6 +14,13 @@ Examples:
 # Documentation
 ## Map.py
 In this implementation of A* search I have used a Map object to store the walls and calulate the shorest route in. In doing so the main loop of the game/demo can be alot smaller as 50 lines of code can be expressed in 1 line hence keeping the main game loop tidy and readable.
+### Variables
+*self* refers to the Map object
+* *self*.surface - This is the [pygame surface](https://www.pygame.org/docs/ref/surface.html) that the Map will be drawn onto
+* *self*.surfsize - This is the width and height of the pygame surface passed to the object. Format = [width, height]
+* *self*.cellsize - This is the width and height of each cell in pixels. Format = [cell width, cell height]
+* *self*.size - This is the width and height of the Map in cells. Format = [width, height]
+* *self*.walls - This is a [numpy zeros](https://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html) array. Format = [[0, 0, 0, 0], [0, 0, 0, 0]]. Where 1 is a wall and 0 is not a wall
 ### Functions
 * __init__ - The init function is run when the object is initalised and for the Map object you can pass multiple parameters
     * surface - This is the [pygame surface](https://www.pygame.org/docs/ref/surface.html) that you want to draw the Map onto. (Required)
