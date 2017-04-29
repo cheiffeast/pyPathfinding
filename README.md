@@ -37,7 +37,7 @@ In this implementation of A* search I have used a Map object to store the walls 
     * startpos - The start position from the __Astar__ function, this is used to check if we have reached the end point. Format = [x, y] where x and y are cell positions (not pixels). Default = [0, 0]
 * __draw__ - This is the function to draw the Map to the surface specified in the __init__. Draws walls as black, none walls as white
 ### Usage
-This below code creates a screen, map object with walls and subsequently solves the Map for start point (5, 5) end point bottom left corner (14, 14)
+This below code creates a screen, map object size 15x15 with walls and subsequently solves the Map for start point (5, 5) end point bottom left corner (14, 14)
 ```python
 import Map
 import pygame
